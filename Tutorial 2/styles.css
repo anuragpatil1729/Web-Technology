@@ -1,0 +1,77 @@
+:root {
+    --border-color: #000000;
+    --head-blue: #deeaf6; /* Light Blue Header */
+    --break-lavender: #e7e6ff; /* Lavender Break */
+    --oe-yellow: #ffff00; /* Bright Yellow OE */
+    --theory-pink: #fbe5d6; /* Salmon/Pinkish Header */
+    --dept-blue: #2e75b6; /* Specific Department Blue */
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    font-size: 11px;
+    line-height: 1.1;
+}
+
+.a4-page {
+    background-color: #fff;
+    width: 210mm; /* Standard A4 width */
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+/* Precise Header Construction */
+.header-container {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    margin-bottom: -1px;
+}
+
+.header-top { font-weight: bold; padding: 2px; }
+.header-main { font-weight: bold; font-size: 14px; border-top: 1px solid var(--border-color); padding: 2px; }
+.header-sub { font-size: 10px; padding: 2px; }
+.header-links { border-top: 1px solid var(--border-color); display: flex; justify-content: space-around; padding: 2px; font-size: 10px; }
+.header-title { color: #0000ff; text-decoration: underline; font-weight: bold; padding: 5px; border-top: 1px solid var(--border-color); }
+
+/* Table Resets */
+table { width: 100%; border-collapse: collapse; margin-top: -1px; }
+th, td { border: 1px solid var(--border-color); padding: 4px; text-align: center; }
+
+/* Meta Table */
+.table-meta td { text-align: left; padding: 3px 10px; font-weight: bold; width: 33.33%; }
+.dept-text { color: var(--dept-blue); text-decoration: underline; }
+
+/* Timetable Styles */
+.row-blue-head { background-color: var(--head-blue); }
+.time-bold { font-weight: bold; width: 100px; }
+.batch-text { text-align: left; font-size: 9.5px; padding-left: 5px; }
+.row-break { background-color: var(--break-lavender); color: #0000ff; font-weight: bold; letter-spacing: 2px; }
+.cell-yellow { background-color: var(--oe-yellow); }
+
+/* Bottom Layout */
+.footer-layout { display: flex; margin-top: 10px; align-items: flex-start; }
+.left-col { flex: 1.8; }
+.right-col { flex: 1; }
+
+.table-info th { font-weight: bold; }
+.row-pink-head { background-color: var(--theory-pink); }
+.sub-label { background-color: #f2f2f2; font-weight: bold; }
+
+.table-info td { text-align: left; padding-left: 8px; }
+.right-col .table-info td { text-align: center; padding-left: 0; }
+
+/* Roll Number Table */
+.table-rolls { margin-top: 10px; width: 100%; }
+.table-rolls th { background-color: #fff; font-weight: normal; }
+.class-teacher { font-weight: bold; text-align: center; }
+
+@media print {
+    body { background: none; padding: 0; }
+    .a4-page { border: none; width: 100%; }
+}
